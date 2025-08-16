@@ -1,8 +1,4 @@
 
-Built by https://www.blackbox.ai
-
----
-
 # AVS Polymers
 
 ## Project Overview
