@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVS Polymers - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="video-background-wrapper"><video playsinline autoplay muted loop id="global-video"><source src="videos/9667568-hd_1920_1080_25fps.mp4" type="video/mp4"></video></div>
+    <header class="header">
+        <div class="container">
+            <div class="logo"><h1>AVS</h1></div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <div class="content-wrapper">
+        <main>
+            <section class="section container">
+                <h1 class="section-title">Contact Us</h1>
+                <div class="contact-grid">
+                    <div class="card contact-form">
+                        <h2>Send a Message</h2>
+                        <form>
+                            <div class="form-group"><input type="text" placeholder="Full Name" required></div>
+                            <div class="form-group"><input type="email" placeholder="Email Address" required></div>
+                            <div class="form-group"><textarea rows="5" placeholder="Your Message" required></textarea></div>
+                            <button type="submit" class="btn">Send</button>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <h2>Get in Touch</h2>
+                        <div class="contact-info-item">📍<p><strong>Head Office:</strong><br>205, Bhagtani Enclave, Bhandup (W), Mumbai</p></div>
+                        <div class="contact-info-item">📞<p>+91 98337 33291</p></div>
+                        <div class="contact-info-item">✉️<p>avs.polymer@gmail.com</p></div>
+                    </div>
+                </div>
+            </section>
+            <section class="section container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="card faq-item" onclick="toggleFAQ(this)"><div class="faq-question"><h4>What products do you manufacture?</h4><span>+</span></div><div class="faq-answer"><p>We specialize in Copper Busbars, Aluminium Busbars, Jumpers, Flexibles, and Epoxy Insulators.</p></div></div>
+                    <div class="card faq-item" onclick="toggleFAQ(this)"><div class="faq-question"><h4>Do you provide international shipping?</h4><span>+</span></div><div class="faq-answer"><p>Yes, we export our products worldwide to over 50 countries.</p></div></div>
+                    <div class="card faq-item" onclick="toggleFAQ(this)"><div class="faq-question"><h4>Do you offer custom manufacturing?</h4><span>+</span></div><div class="faq-answer"><p>Yes, we provide custom manufacturing services based on your specific requirements.</p></div></div>
+                </div>
+            </section>
+        </main>
+                <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>AVS POLYMERS</h3>
+                        <p>Manufacturer & exporter of Copper Busbars, Aluminium Busbars, Jumpers, Flexibles, and Epoxy Insulators.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact</h3>
+                        <p>205, Bhagtani Enclave,<br>Bhandup (W), Mumbai</p>
+                        <p>Rabale M.I.D.C., Navi Mumbai</p>
+                        <p>+91 98337 33291</p>
+                        <p>avs.polymer@gmail.com</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <a href="index.html">Home</a>
+                        <a href="products.html">Products</a>
+                        <a href="about.html">About</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+                    <div class="footer-bottom">
+                    <p>&copy; 2025 AVS POLYMERS. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

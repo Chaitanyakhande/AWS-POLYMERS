@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSE Phyd - All Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="video-background-wrapper"><video playsinline autoplay muted loop id="global-video"><source src="videos/9667568-hd_1920_1080_25fps.mp4" type="video/mp4"></video></div>
+    <header class="header">
+        <div class="container">
+            <div class="logo"><h1>SSE Phyd</h1></div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <div class="dropdown">
+                    <a href="products.html" class="nav-link active">Products ▼</a>
+                    <div class="dropdown-content">
+                        <a href="cast-resin-transformers.html">Cast Resin Transformers</a>
+                        <a href="lv-instrument-transformers.html">LV Instrument Transformers</a>
+                        <a href="epoxy-moulded-bushings.html">Epoxy Moulded Bushings</a>
+                        <a href="epoxy-support-insulators.html">Epoxy Support Insulators</a>
+                        <a href="epoxy-terminal-boards.html">Epoxy Terminal Boards</a>
+                        <a href="epoxy-moulded-insulators.html">Epoxy Moulded Insulators</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <div class="content-wrapper">
+        <main>
+            <!-- Hero Section -->
+            <section class="section container">
+                <div class="category-header">
+                    <h1 class="section-title">Our Complete Product Range</h1>
+                    <p class="category-description">Sri Surya Engineering Products specializes in manufacturing high-quality electrical components including Cast Resin Transformers, LV Instrument Transformers, and Epoxy Moulded Components using advanced Automatic Pressure Gelation Technique.</p>
+                </div>
+            </section>
+
+            <!-- Product Categories Overview -->
+            <section class="section container">
+                <h2 class="section-title">Product Categories</h2>
+                <div class="category-overview-grid">
+                    <div class="card category-overview-card" onclick="location.href='cast-resin-transformers.html'">
+                        <img src="https://ssephyd.com/wp-content/uploads/2023/02/mv_transformer.png" alt="Cast Resin Transformers" class="category-image">
+                        <div class="category-content">
+                            <h3>Cast Resin Transformers</h3>
+                            <p>25 KVA to 630 KVA dry-type distribution transformers</p>
+                            <span class="product-count">8 Products</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card category-overview-card" onclick="location.href='lv-instrument-transformers.html'">
+                        <img src="https://ssephyd.com/wp-content/uploads/2023/02/mv_transformer.png" alt="LV Instrument Transformers" class="category-image">
+                        <div class="category-content">
+                            <h3>LV Instrument Transformers</h3>
+                            <p>Current transformers from 100/5A to 1000/5A</p>
+                            <span class="product-count">6 Products</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card category-overview-card" onclick="location.href='epoxy-moulded-bushings.html'">
+                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400" alt="Epoxy Moulded Bushings" class="category-image">
+                        <div class="category-content">
+                            <h3>Epoxy Moulded Bushings</h3>
+                            <p>High-current bushings from 630A to 2000A</p>
+                            <span class="product-count">5 Products</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card category-overview-card" onclick="location.href='epoxy-support-insulators.html'">
+                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400" alt="Epoxy Support Insulators" class="category-image">
+                        <div class="category-content">
+                            <h3>Epoxy Support Insulators</h3>
+                            <p>11KV, 22KV, and 33KV support insulators</p>
+                            <span class="product-count">5 Products</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card category-overview-card" onclick="location.href='epoxy-terminal-boards.html'">
+                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400" alt="Terminal Boards" class="category-image">
+                        <div class="category-content">
+                            <h3>Epoxy Terminal Boards</h3>
+                            <p>Terminal boards for transformer connections</p>
+                            <span class="product-count">3 Products</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card category-overview-card" onclick="location.href='epoxy-moulded-insulators.html'">
+                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400" alt="Epoxy Insulators" class="category-image">
+                        <div class="category-content">
+                            <h3>Epoxy Moulded Insulators</h3>
+                            <p>Versatile insulators for various applications</p>
+                            <span class="product-count">3 Products</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Filter and All Products -->
+            <section class="section container">
+                <div class="products-header">
+                    <h2 class="section-title">All Products</h2>
+                    <div class="filter-controls">
+                        <select id="categoryFilter" class="filter-select">
+                            <option value="all">All Categories</option>
+                            <option value="Cast Resin Transformers">Cast Resin Transformers</option>
+                            <option value="LV Instrument Transformers">LV Instrument Transformers</option>
+                            <option value="Epoxy Moulded Bushings">Epoxy Moulded Bushings</option>
+                            <option value="Epoxy Support Insulators">Epoxy Support Insulators</option>
+                            <option value="Epoxy Terminal Transformer Boards">Epoxy Terminal Boards</option>
+                            <option value="Epoxy Moulded Insulators">Epoxy Moulded Insulators</option>
+                        </select>
+                        <select id="sortFilter" class="filter-select">
+                            <option value="default">Sort by Default</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="name">Name: A to Z</option>
+                            <option value="rating">Rating: High to Low</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="products-grid" id="productsGrid"></div>
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>SSE PHYD</h3>
+                        <p>Manufacturer of Cast Resin Transformers, LV Instrument Transformers, Epoxy Moulded Bushings & Insulators.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact</h3>
+                        <p>Hyderabad, Telangana<br>Southern India</p>
+                        <p>ISO 9001:2015 Certified</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Product Categories</h3>
+                        <a href="cast-resin-transformers.html">Cast Resin Transformers</a>
+                        <a href="lv-instrument-transformers.html">LV Instrument Transformers</a>
+                        <a href="epoxy-moulded-bushings.html">Epoxy Moulded Bushings</a>
+                        <a href="epoxy-support-insulators.html">Epoxy Support Insulators</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Sri Surya Engineering Products. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="modal-overlay" id="quickViewModal"></div>
+    <script src="script.js"></script>
+</body>
+</html>

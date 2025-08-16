@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LV Instrument Transformers - SSE Phyd</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="video-background-wrapper"><video playsinline autoplay muted loop id="global-video"><source src="videos/9667568-hd_1920_1080_25fps.mp4" type="video/mp4"></video></div>
+    <header class="header">
+        <div class="container">
+            <div class="logo"><h1>SSE Phyd</h1></div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <div class="dropdown">
+                    <a href="products.html" class="nav-link active">Products ▼</a>
+                    <div class="dropdown-content">
+                        <a href="cast-resin-transformers.html">Cast Resin Transformers</a>
+                        <a href="lv-instrument-transformers.html">LV Instrument Transformers</a>
+                        <a href="epoxy-moulded-bushings.html">Epoxy Moulded Bushings</a>
+                        <a href="epoxy-support-insulators.html">Epoxy Support Insulators</a>
+                        <a href="epoxy-terminal-boards.html">Epoxy Terminal Boards</a>
+                        <a href="epoxy-moulded-insulators.html">Epoxy Moulded Insulators</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <div class="content-wrapper">
+        <main>
+            <section class="section container">
+                <div class="category-header">
+                    <h1 class="section-title">LV Instrument Transformers</h1>
+                    <p class="category-description">Precision low voltage current transformers for metering, protection, and energy monitoring applications. Our LV instrument transformers provide high accuracy measurements with excellent linearity and thermal stability.</p>
+                </div>
+                
+                <div class="category-features">
+                    <h2>Key Features</h2>
+                    <div class="features-grid">
+                        <div class="card feature-card">
+                            <h3>High Accuracy</h3>
+                            <p>Class 0.5 accuracy for precise measurements</p>
+                        </div>
+                        <div class="card feature-card">
+                            <h3>Wide Range</h3>
+                            <p>Available from 100/5A to 1000/5A ratings</p>
+                        </div>
+                        <div class="card feature-card">
+                            <h3>Excellent Linearity</h3>
+                            <p>Superior performance across full load range</p>
+                        </div>
+                        <div class="card feature-card">
+                            <h3>Robust Design</h3>
+                            <p>Built for demanding industrial environments</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products-section">
+                    <h2>Our LV Instrument Transformers</h2>
+                    <div class="products-grid" id="categoryProductsGrid"></div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>SSE PHYD</h3>
+                        <p>Manufacturer of Cast Resin Transformers, LV Instrument Transformers, Epoxy Moulded Bushings & Insulators.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact</h3>
+                        <p>Hyderabad, Telangana<br>Southern India</p>
+                        <p>ISO 9001:2015 Certified</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Product Categories</h3>
+                        <a href="cast-resin-transformers.html">Cast Resin Transformers</a>
+                        <a href="lv-instrument-transformers.html">LV Instrument Transformers</a>
+                        <a href="epoxy-moulded-bushings.html">Epoxy Moulded Bushings</a>
+                        <a href="epoxy-support-insulators.html">Epoxy Support Insulators</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Sri Surya Engineering Products. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="modal-overlay" id="quickViewModal"></div>
+    <script>
+        // LV Instrument Transformers products
+        const categoryProducts = [
+            {"id": 9, "title": "LV Current Transformer 100/5A", "category": "LV Instrument Transformers", "description": "Low voltage current transformer for metering and protection applications. High accuracy class 0.5.", "image": "https://ssephyd.com/wp-content/uploads/2023/02/mv_transformer.png", "price": "$180.00", "stock": "In Stock", "rating": "4.5"},
+            {"id": 10, "title": "LV Current Transformer 200/5A", "category": "LV Instrument Transformers", "description": "Precision current transformer for energy monitoring systems with excellent linearity.", "image": "https://ssephyd.com/wp-content/uploads/2023/02/mv_transformer.png", "price": "$220.00", "stock": "In Stock", "rating": "4.6"},
+            {"id": 11, "title": "LV Current Transformer 400/5A", "category": "LV Instrument Transformers", "description": "Heavy-duty current transformer for industrial monitoring and control applications.", "image": "https://ssephyd.com/wp-content/uploads/2023/02/mv_transformer.png", "price": "$280.00", "stock": "In Stock", "rating": "4.7"},
+            {"id": 12, "title": "LV Current Transformer 600/5A", "category": "LV Instrument Transformers", "description": "High-capacity current transformer suitable for large industrial installations.", "image": "https://ssephyd.com/wp-content/uploads/2023/02/mv_transformer.png", "price": "$350.00", "stock": "In Stock", "rating": "4.5"},
+            {"id": 13, "title": "LV Current Transformer 800/5A", "category": "LV Instrument Transformers", "description": "Premium current transformer with enhanced accuracy for critical measurement applications.", "image": "https://ssephyd.com/wp-content/uploads/2023/02/mv_transformer.png", "price": "$420.00", "stock": "Out of Stock", "rating": "4.8"},
+            {"id": 14, "title": "LV Current Transformer 1000/5A", "category": "LV Instrument Transformers", "description": "High-capacity precision CT for power monitoring in heavy industrial environments.", "image": "https://ssephyd.com/wp-content/uploads/2023/02/mv_transformer.png", "price": "$520.00", "stock": "In Stock", "rating": "4.7"}
+        ];
+    </script>
+    <script src="category-script.js"></script>
+</body>
+</html>
