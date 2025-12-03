@@ -489,7 +489,13 @@ body {
         border-radius: 12px;
         text-align: center;
     }
-
+    .nav-link {
+        display: block;
+        width: 100%;
+        padding: 0.7rem 0;
+        background: rgba(0,0,0,0.35);
+        border-radius: 8px;
+    }
     .nav.open {
         display: flex !important;
     }
