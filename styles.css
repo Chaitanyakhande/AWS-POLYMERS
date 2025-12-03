@@ -1,0 +1,432 @@
+/* --- Professional Theme --- */
+:root {
+    --bg-dark: #0a0a18;
+    --primary-glow: #00f2ff;
+    --secondary-glow: #ff00c1;
+    --text-light: #e0e0ff;
+    --border-color: rgba(0, 242, 255, 0.2);
+    --card-bg: rgba(20, 20, 40, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-light);
+    background: var(--bg-dark);
+    overflow-x: hidden;
+}
+
+/* Global Video Background & Wrapper */
+.video-background-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -2;
+    overflow: hidden;
+}
+
+#global-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-background-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(10, 10, 24, 0.8), rgba(10, 10, 24, 0.95));
+    z-index: -1;
+}
+
+.content-wrapper {
+    padding-top: 80px;
+}
+
+/* General Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    color: #fff;
+}
+
+/* Header */
+.header {
+    background: rgba(10, 10, 24, 0.5);
+    border-bottom: 1px solid var(--border-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* This sets a fixed height to prevent the logo from stretching the bar */
+    height: 90px;
+    padding: 0 20px;
+}
+
+.nav {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+    color: var(--primary-glow);
+}
+
+.nav-link.active {
+    color: var(--primary-glow);
+    border-bottom: 2px solid var(--primary-glow);
+}
+
+/* Logo */
+.logo img {
+    height: 80px;
+    vertical-align: middle;
+}
+
+/* Hero Section */
+.hero {
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #c0c0c0;
+    max-width: 700px;
+    margin: 1rem auto 2rem;
+}
+
+/* Buttons */
+.btn {
+    padding: 1rem 2.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: 2px solid var(--primary-glow);
+    background: transparent;
+    color: var(--primary-glow);
+}
+
+.btn:hover {
+    background: var(--primary-glow);
+    color: var(--bg-dark);
+}
+
+/* Card Styles */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 2rem;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Product Card & Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+}
+
+.product-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-content {
+    padding: 1.5rem;
+}
+
+/* Quick View Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 24, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: var(--bg-dark);
+    border: 1px solid var(--primary-glow);
+    border-radius: 15px;
+    width: 90%;
+    max-width: 800px;
+    padding: 2rem;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.4s ease;
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: var(--text-light);
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.quick-view-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.quick-view-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* All Other Grids */
+.features-grid,
+.stats-grid,
+.values-grid,
+.expertise-grid,
+.team-grid,
+.cert-grid,
+.mv-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.features-grid,
+.stats-grid,
+.team-grid,
+.cert-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.expertise-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.values-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.mv-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Contact & FAQ */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.contact-map iframe {
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    /* Updated dark theme filter for the map */
+    filter: grayscale(1) invert(1) contrast(0.9) hue-rotate(200deg) saturate(3);
+}
+
+.contact-info-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 1.5rem;
+    backdrop-filter: blur(5px);
+}
+
+.contact-card h4 {
+    color: var(--primary-glow);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-card p {
+    color: var(--text-light);
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+}
+
+.faq-question {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease-out;
+    padding: 0 1.5rem;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding: 1rem 1.5rem 1.5rem;
+}
+
+/* Footer */
+.footer {
+    background: #000;
+    padding: 4rem 0 2rem;
+    margin-top: 4rem;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.footer-section h3 {
+    color: var(--primary-glow);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-section p,
+.footer-section a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    display: block;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.footer-section a:hover {
+    opacity: 1;
+    color: var(--primary-glow);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0.6;
+}
+
+/* Animation Classes */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[class*="grid"]>* {
+    transition-delay: calc(var(--stagger-index) * 100ms);
+}
