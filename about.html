@@ -14,22 +14,22 @@
             <source src="videos/9667568-hd_1920_1080_25fps.mp4" type="video/mp4">
         </video>
     </div>
-<header class="header">
-  <div class="container header-inner">
-        <a href="index.html" class="logo" aria-label="AVS Polymers Home">
-          <img src="images/avs-logo.png" alt="AVS Logo">
-        </a>
-        <button class="menu-btn" id="menuToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation">
-          ☰
-        </button>
-        <nav class="nav" id="navMenu" role="navigation" aria-label="Main navigation">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="products.html" class="nav-link">Products</a>
-          <a href="about.html" class="nav-link">About</a>
-          <a href="contact.html" class="nav-link">Contact</a>
-        </nav>
-  </div>
-</header>
+    <header class="header">
+      <div class="container header-inner">
+            <a href="index.html" class="logo" aria-label="AVS Polymers Home">
+              <img src="images/avs-logo.png" alt="AVS Logo">
+            </a>
+            <button class="menu-btn" id="menuToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation">
+              ☰
+            </button>
+            <nav class="nav" id="navMenu" role="navigation" aria-label="Main navigation">
+              <a href="index.html" class="nav-link">Home</a>
+              <a href="products.html" class="nav-link">Products</a>
+              <a href="about.html" class="nav-link">About</a>
+              <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+      </div>
+    </header>
     <div class="content-wrapper">
         <main>
             <section class="section container">
@@ -87,54 +87,46 @@
     </div>
     <script src="script.js"></script>
     <script>
-        const menuBtn = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
-
-        menuBtn.addEventListener('click', () => {
-        navMenu.classList.toggle('open');
+        document.addEventListener('DOMContentLoaded', function () {
+          const menuBtn = document.getElementById('menuToggle');
+          const navMenu = document.getElementById('navMenu');
+        
+          // safety: if elements missing, quietly exit
+          if (!menuBtn || !navMenu) return;
+        
+          // toggle function
+          function toggleNav() {
+            const isOpen = navMenu.classList.toggle('open');
+            menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            // optional: prevent body scroll when menu open
+            if (isOpen) document.body.style.overflow = 'hidden';
+            else document.body.style.overflow = '';
+          }
+        
+          menuBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            toggleNav();
+          });
+        
+          // close when clicking outside nav
+          document.addEventListener('click', function (e) {
+            if (!navMenu.contains(e.target) && !menuBtn.contains(e.target) && navMenu.classList.contains('open')) {
+              navMenu.classList.remove('open');
+              menuBtn.setAttribute('aria-expanded', 'false');
+              document.body.style.overflow = '';
+            }
+          });
+        
+          // optional: close menu on ESC
+          document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+              navMenu.classList.remove('open');
+              menuBtn.setAttribute('aria-expanded', 'false');
+              document.body.style.overflow = '';
+            }
+          });
+        
         });
     </script>
-    <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const menuBtn = document.getElementById('menuToggle');
-  const navMenu = document.getElementById('navMenu');
-
-  // safety: if elements missing, quietly exit
-  if (!menuBtn || !navMenu) return;
-
-  // toggle function
-  function toggleNav() {
-    const isOpen = navMenu.classList.toggle('open');
-    menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    // optional: prevent body scroll when menu open
-    if (isOpen) document.body.style.overflow = 'hidden';
-    else document.body.style.overflow = '';
-  }
-
-  menuBtn.addEventListener('click', function (e) {
-    e.stopPropagation();
-    toggleNav();
-  });
-
-  // close when clicking outside nav
-  document.addEventListener('click', function (e) {
-    if (!navMenu.contains(e.target) && !menuBtn.contains(e.target) && navMenu.classList.contains('open')) {
-      navMenu.classList.remove('open');
-      menuBtn.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    }
-  });
-
-  // optional: close menu on ESC
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && navMenu.classList.contains('open')) {
-      navMenu.classList.remove('open');
-      menuBtn.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    }
-  });
-
-});
-</script>
 </body>
 </html>
