@@ -492,9 +492,11 @@ body {
     .nav-link {
         display: block;
         width: 100%;
-        padding: 0.7rem 0;
+        padding: 0.7rem 0.9rem;
         background: rgba(0,0,0,0.35);
-        border-radius: 8px;
+        border-radius: 15px; /* same as cards */
+        border: 1px solid var(--border-color); /* same border color */
+        text-align: center;
     }
     .nav.open {
         display: flex !important;
