@@ -582,3 +582,9 @@ body {
         height: auto;
     }
 }
+/* DESKTOP HEADER FIX */
+@media (min-width: 1025px) {
+    .header .container {
+        padding: 0 60px !important; /* More side spacing */
+    }
+}
