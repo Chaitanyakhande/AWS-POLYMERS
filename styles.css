@@ -182,14 +182,126 @@ body {
     align-items: center;
 }
 
+/* Menu button (hidden on desktop) */
 .menu-btn {
-    display: none !important;   /* HIDDEN ON DESKTOP */
+    display: none !important;
     background: none;
     border: none;
     font-size: 2rem;
     color: var(--text-light);
     cursor: pointer;
 }
+
+/* Card Styles */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 2rem;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+}
+
+/* ------------------------------- */
+/*  CLEAN + MERGED MOBILE QUERY    */
+/* ------------------------------- */
+
+@media (max-width: 768px) {
+
+    /* GLOBAL */
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    section {
+        padding: 1.2rem 1rem;
+    }
+
+    /* VIDEO FIX */
+    .video-background-wrapper {
+        position: absolute !important;
+        height: auto !important;
+        top: 0;
+        left: 0;
+        z-index: -2;
+    }
+
+    #global-video {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 420px !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+    }
+
+    .content-wrapper {
+        padding-top: 120px !important;
+    }
+
+    /* NAV FIX */
+    .menu-btn {
+        display: block !important;
+        margin-left: auto;
+        z-index: 999;
+    }
+
+    .nav {
+        display: none !important;
+        flex-direction: column !important;
+        background: rgba(0,0,0,0.65);
+        padding: 1rem;
+        width: 100%;
+        margin-top: 1rem;
+        text-align: center;
+        border-radius: 8px;
+        gap: 1rem;
+    }
+
+    .nav.open {
+        display: flex !important;
+    }
+
+    .header .container {
+        height: auto !important;
+        padding: 1rem 1rem !important;
+    }
+
+    .logo img {
+        height: 55px !important;
+    }
+
+    /* HERO FIX */
+    .hero {
+        height: auto !important;
+        padding: 2rem 0 !important;
+    }
+
+    .hero-title {
+        font-size: 2rem !important;
+    }
+
+    /* PRODUCTS */
+    .products-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* ABOUT / CONTACT / FOOTER */
+    .contact-grid,
+    .values-grid,
+    .stats-grid,
+    .features-grid,
+    .mv-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+    }
 }
 /* Card Styles */
 .card {
