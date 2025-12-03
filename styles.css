@@ -164,42 +164,32 @@ body {
     background: var(--primary-glow);
     color: var(--bg-dark);
 }
-@media (max-width: 768px) {
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
 
-    .header-inner {
-        height: auto !important;
-        padding: 1rem 0;
-    }
+.logo img {
+    height: 80px;
+    width: auto;
+}
 
-    .logo img {
-        height: 55px !important;
-    }
+.nav {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
 
-    /* Show menu button on mobile */
-    .menu-btn {
-        display: block !important;
-    }
-
-    /* Collapse nav into dropdown */
-    .nav {
-        display: none !important;               /* hidden by default */
-        flex-direction: column !important;
-        background: rgba(0,0,0,0.65);
-        width: 100%;
-        padding: 1rem 0;
-        margin-top: 1rem;
-        border-radius: 8px;
-        text-align: center;
-    }
-
-    .nav.open {
-        display: flex !important;               /* show when toggled */
-    }
-
-    .nav-link {
-        padding: 0.5rem 0;
-        font-size: 1.1rem;
-    }
+.menu-btn {
+    display: none !important;   /* HIDDEN ON DESKTOP */
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--text-light);
+    cursor: pointer;
+}
 }
 /* Card Styles */
 .card {
@@ -600,5 +590,42 @@ body {
 
     * {
         word-break: break-word;
+    }
+}
+@media (max-width: 768px) {
+
+    .header-inner {
+        height: auto !important;
+        padding: 1rem 0;
+    }
+
+    .logo img {
+        height: 55px !important;
+    }
+
+    /* Show menu button on mobile */
+    .menu-btn {
+        display: block !important;
+    }
+
+    /* Collapse nav into dropdown */
+    .nav {
+        display: none !important;               /* hidden by default */
+        flex-direction: column !important;
+        background: rgba(0,0,0,0.65);
+        width: 100%;
+        padding: 1rem 0;
+        margin-top: 1rem;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .nav.open {
+        display: flex !important;               /* show when toggled */
+    }
+
+    .nav-link {
+        padding: 0.5rem 0;
+        font-size: 1.1rem;
     }
 }
